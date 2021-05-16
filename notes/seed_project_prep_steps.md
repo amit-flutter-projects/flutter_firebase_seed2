@@ -5,8 +5,12 @@
 * **Prepare a firebase project.**
   * **Create an android app in your firebase project**
   * Enable firebase for android, 
-      * Firebase core
-      * Firebase auth
+      * **Firebase core**
+      * **Firebase auth**
       * Firebase firestore.
+      * Flutter bloc
       * todo App.
+  * Firebase analytics
+  * Firebase crashalytics
+* Added all the firebase items for web.
 * 
