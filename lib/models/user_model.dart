@@ -67,28 +67,28 @@ class UserModel extends Equatable {
     };
   }
 
-//   factory UserModel.fromDocument(DocumentSnapshot<UserModel> docSnapshot) {
-//     if (docSnapshot == null) {
-//       return null;
-//     }
-//     final data = docSnapshot.data();
-//     return UserModel(
-//       id: docSnapshot.id ?? '',
-//       username: data.username ?? '',
-//       email: data.email ?? '',
-//       profileImageUrl: data.profileImageUrl ?? '',
-//       followers: (data.followers ?? 0).toInt(),
-//       following: (data.following ?? 0).toInt(),
-//       bio: data.bio ?? '',
-//     );
-//   }
+  factory UserModel.fromDocument(DocumentSnapshot<UserModel> docSnapshot) {
+    if (docSnapshot == null) {
+      return null;
+    }
+    final data = docSnapshot.data();
+    return UserModel(
+      id: docSnapshot.id ?? '',
+      username: data.username ?? '',
+      email: data.email ?? '',
+      profileImageUrl: data.profileImageUrl ?? '',
+      followers: (data.followers ?? 0).toInt(),
+      following: (data.following ?? 0).toInt(),
+      bio: data.bio ?? '',
+    );
+  }
 
-//   static List<UserModel> getUserListFromQuerySnapshot(
-//       QuerySnapshot<UserModel> querySnapshot) {
-//     List<UserModel> users = [];
-//     querySnapshot.docs.forEach((QueryDocumentSnapshot<UserModel> userSnapshot) {
-//       users.add(UserModel.fromDocument(userSnapshot));
-//     });
-//     return users;
-//   }
+  static List<UserModel> getUserListFromQuerySnapshot(
+      QuerySnapshot<UserModel> querySnapshot) {
+    List<UserModel> users = [];
+    querySnapshot.docs.forEach((QueryDocumentSnapshot<UserModel> userSnapshot) {
+      users.add(UserModel.fromDocument(userSnapshot));
+    });
+    return users;
+  }
  }
