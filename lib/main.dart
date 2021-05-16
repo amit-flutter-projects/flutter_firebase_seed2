@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_firebase_seed2/blocs/auth/auth_bloc.dart';
 import 'package:flutter_firebase_seed2/blocs/simple_bloc_observer.dart';
-import 'package:flutter_firebase_seed2/config/custom_router.dart';
+//import 'package:flutter_firebase_seed2/config/custom_router.dart';
 import 'package:flutter_firebase_seed2/repositories/auth/auth_repository.dart';
 import 'package:flutter_firebase_seed2/screens/login/cubit/login_cubit.dart';
 import 'package:flutter_firebase_seed2/screens/login/login_screen.dart';

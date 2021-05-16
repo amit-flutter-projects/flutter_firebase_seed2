@@ -12,8 +12,8 @@ class NavScreen extends StatelessWidget {
           title: Text('Nav Screen'),
         ),
         body: Center(
-          child: Text('Nav scree'),
-        )
-    );;
+          child: Text('Nav screen'),
+        ));
+    ;
   }
 }
