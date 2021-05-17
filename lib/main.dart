@@ -8,6 +8,7 @@ import 'package:flutter_firebase_seed2/repositories/auth/auth_repository.dart';
 import 'package:flutter_firebase_seed2/screens/login/cubit/login_cubit.dart';
 import 'package:flutter_firebase_seed2/screens/login/login_screen.dart';
 import 'package:flutter_firebase_seed2/screens/nav/nav_screen.dart';
+import 'package:flutter_firebase_seed2/screens/new_login_screen/new_login_screen.dart';
 import 'package:flutter_firebase_seed2/screens/splash/splash_screen.dart';
 
 void main() async {
@@ -20,6 +21,8 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    /// Comment this line to not logout after refresh
+    AuthRepository().logout();
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider<AuthRepository>(
@@ -49,6 +52,7 @@ class MyApp extends StatelessWidget {
             SplashScreen.routeName: (ctx) => SplashScreen(),
             LoginScreen.routeName: (ctx) => LoginScreen(),
             NavScreen.routeName: (ctx) => NavScreen(),
+            NewLoginScreen.routeName: (ctx) => NewLoginScreen(),
           },
           initialRoute: SplashScreen.routeName,
         ),

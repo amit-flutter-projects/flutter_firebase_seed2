@@ -7,13 +7,17 @@ class NavScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text('Nav Screen'),
-        ),
-        body: Center(
-          child: Text('Nav screen'),
-        ));
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Scaffold(
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            title: Text('Nav Screen'),
+          ),
+          body: Center(
+            child: Text('Nav screen'),
+          )),
+    );
     ;
   }
 }
