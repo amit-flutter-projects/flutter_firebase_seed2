@@ -21,8 +21,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    /// Comment this line to not logout after refresh
-    AuthRepository().logout();
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider<AuthRepository>(

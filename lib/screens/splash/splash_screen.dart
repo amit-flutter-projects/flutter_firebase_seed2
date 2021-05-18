@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
             Navigator.of(context)
                 .pushReplacementNamed(NewLoginScreen.routeName);
           } else if (state.status == AuthStatus.authenticated) {
-            Navigator.of(context).pushReplacementNamed(NavScreen.routeName);
+            Navigator.of(context).pushNamed(NavScreen.routeName);
           }
         },
         child: const Scaffold(
